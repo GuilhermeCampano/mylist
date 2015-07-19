@@ -20,18 +20,19 @@
 
     <!-- your app's js -->
     <script src="app/app.js"></script>
+    <script src="app/shared/MainCtrl.js"></script>
+      
+    <script src="app/views/list/ListCtrl.js"></script>
+	<script src="app/views/list/ListDetailCtrl.js"></script>
+    <script src="app/views/list/ListService.js"></script>
+      
     <script src="app/views/account/AccountCtrl.js"></script>
-    <script src="app/views/chat/ChatCtrl.js"></script>
-	<script src="app/views/chat/ChatDetailCtrl.js"></script>
-	<script src="app/views/chat/ChatService.js"></script>
+      
 	<script src="app/views/dash/DashCtrl.js"></script>
   </head>
   <body ng-app="starter">
-    <!--The nav bar that will be updated as we navigate between views -->
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-    </ion-nav-bar>
+
+   
       
     <!--The views will be rendered in the <ion-nav-view>  -->
     <ion-nav-view></ion-nav-view>

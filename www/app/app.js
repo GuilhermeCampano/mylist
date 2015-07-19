@@ -34,14 +34,40 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+
+
+  .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'app/shared/navfooter/tabs.html'
+    templateUrl: 'app/shared/tabs.html',
+    controller: 'MainCtrl'
   })
+  
+
 
   // Each tab has its own nav history stack:
-
+  
+   .state('tab.list', {
+      url: '/lists',
+      views: {
+        'tab-lists': {
+          templateUrl: 'app/views/list/tab-lists.html',
+          controller: 'ListCtrl'
+        }
+      }
+    })
+  
+    .state('tab.list-detail', {
+      url: '/lists/:listId',
+      views: {
+        'tab-lists': {
+          templateUrl: 'app/views/list/list-detail.html',
+          controller: 'ListDetailCtrl'
+        }
+      }
+    })
+  
+  
   .state('tab.dash', {
     url: '/dash',
     views: {
@@ -51,25 +77,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'app/views/chat/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'app/views/chat/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
 
   .state('tab.account', {
     url: '/account',
@@ -82,7 +89,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/lists');
 
 });
 
