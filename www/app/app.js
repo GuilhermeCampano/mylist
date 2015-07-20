@@ -57,11 +57,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
   
+   .state('tab.list-add', {
+      url: '/lists/add',
+      views: {
+        'tab-lists': {
+          templateUrl: 'app/views/list/list-add.html',
+          controller: 'ListCtrl'
+        }
+      }
+    })
+  
     .state('tab.list-detail', {
       url: '/lists/:listId',
       views: {
         'tab-lists': {
           templateUrl: 'app/views/list/list-detail.html',
+          controller: 'ListDetailCtrl'
+        }
+      }
+    })
+  
+  
+   .state('tab.list-detail-add', {
+      url: '/lists/:listId/add',
+      views: {
+        'tab-lists': {
+          templateUrl: 'app/views/list/list-detail-add.html',
           controller: 'ListDetailCtrl'
         }
       }

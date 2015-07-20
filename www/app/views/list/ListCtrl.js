@@ -1,8 +1,27 @@
-controllers.controller('ListCtrl', function($scope, Lists) {
 
-  $scope.lists = Lists.all();
-  $scope.remove = function(list) {
-    Lists.remove(list);
-  };
+controllers.controller('ListCtrl', function ($scope, Lists, $state) {
+
+    $scope.lists = Lists.all();
+    
+
+    $scope.newList = {
+        id : $scope.lists.length ,
+        name: '',
+        description: '',
+        image: '',
+        dateOfCreation: '',
+        items : [],
+        add : function (){
+            var msg = Lists.add(this);
+            if (msg) $state.transitionTo('tab.list');
+        }
+       
+    }
+    
+    $scope.remove = function (list) {
+        Lists.remove(list);
+    };
+  
+    
 });
 

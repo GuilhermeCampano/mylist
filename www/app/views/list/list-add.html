@@ -1,0 +1,21 @@
+<ion-view view-title="ListAdd">
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Nome da Lista</span>
+        <input ng-model="newList.name"  type="text" placeholder="Compras">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Descrição</span>
+        <input ng-model="newList.description" type="text" 
+               placeholder="Compras no mercado X">
+      </label>
+  
+      <button class="button button-block button-positive" ng-click="newList.add()">
+          <b>Adicionar</b>
+      </button>
+    </div>
+      
+  </ion-content>
+ 
+</ion-view>
