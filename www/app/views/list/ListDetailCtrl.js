@@ -4,7 +4,7 @@ controllers.controller('ListDetailCtrl', function($scope, $stateParams, Lists) {
   $scope.newItem = {
     id : $scope.list.items.length, 
     name : "",
-    qtd : 1, 
+    qtd : "", 
     unity : "",
     addItem : function (){
         console.log(this);
