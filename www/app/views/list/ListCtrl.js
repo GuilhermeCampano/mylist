@@ -9,7 +9,7 @@ controllers.controller('ListCtrl', function ($scope, Lists, $state) {
         name: '',
         description: '',
         image: '',
-        dateOfCreation: '',
+        dateOfCreation: new Date().getTime(),
         items : [],
         add : function (){
             var msg = Lists.add(this);

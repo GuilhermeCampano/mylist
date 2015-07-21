@@ -1,6 +1,28 @@
-<ion-view view-title="ListAdd">
-  <ion-content>
-    teste
+<ion-view view-title="ListAddItem">
+  <ion-content class="padding">
+      
+    <div class="list">
+        
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Nome do item</span>
+        <input ng-model="newItem.name"  type="text" placeholder="Item">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Quantidade</span>
+        <input ng-model="nemItem.qtd" type="text" 
+               placeholder="1">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Unidade</span>
+        <input ng-model="newItem.unity" type="text" placeholder="Kg">
+      </label>
+        
+      <button class="button button-block button-positive" ng-click="newItem.addItem()">
+          <b>Adicionar</b>
+      </button>
+        
+    </div>
+      
   </ion-content>
  
 </ion-view>

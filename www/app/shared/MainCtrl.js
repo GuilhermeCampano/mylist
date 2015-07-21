@@ -7,4 +7,8 @@ controllers.controller('MainCtrl', function($scope, $ionicSideMenuDelegate, $htt
        $state.transitionTo(page);
     }
     
+    $scope.changePageByLocation = function (location){
+       window.location.hash=location;
+    }
+   
 });

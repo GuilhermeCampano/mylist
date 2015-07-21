@@ -3,7 +3,8 @@ body {
 }
 
 .button-float {
- 
+  width: 52px;
+  height: 52px;
   color: white !important;
   z-index: 12 !important;
   position: absolute !important;
