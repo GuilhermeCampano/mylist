@@ -40,21 +40,12 @@ navigation history that also transitions its views in and out.
   <!-- side menu esquerda -->
   <ion-side-menu side="left">
     <header class="bar bar-header bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">Menu</h1>
     </header>
     <ion-content class="has-header">
       <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
-        </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
-        </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close ng-click="changePageByLocation('/tab/lists')">
+          Lista de compras
         </ion-item>
       </ion-list>
     </ion-content>

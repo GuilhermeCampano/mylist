@@ -1,6 +1,6 @@
 <ion-view view-title="{{list.name}}">
   <ion-content class="padding">
-    <h2>{{list.description}} </h2>
+    <h2>Lista: {{list.name}}</h2>
     <ion-list>  
         <ion-item class="item-remove-animate item-icon-right" ng-repeat="item in list.items" type="item-text-wrap">
             <p><b>{{item.name}}:</b> {{item.qtd}} {{item.unity}}  </p>
