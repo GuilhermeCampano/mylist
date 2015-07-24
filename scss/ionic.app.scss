@@ -10,7 +10,12 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
-$positive: #057b6c !default;
+
+
+
+$positive: #057b6c !default; //menu 
+
+$assertive: #f5455e!default; //botão
 
 body {
   cursor: url("http://ionicframework.com/img/finger.png"), auto;
@@ -41,6 +46,7 @@ body {
   
 }
 
+.inline-item-checkbox{ margin: -14px;margin-right: 10px;}
 
 
 // NÃO REMOVER ISSO, essa parte insere no css \\

@@ -17,7 +17,9 @@ controllers.controller('ListCtrl', function ($scope, Lists, $state) {
         add : function (){
             if ( !this.validate() ) return false; 
             var msg = Lists.add(this);
-            if (msg) $state.transitionTo('tab.list');
+            if (msg){
+                $state.transitionTo('tab.list');
+            }
         },
         
         validate : function (){

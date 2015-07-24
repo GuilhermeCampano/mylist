@@ -2,14 +2,19 @@
   <ion-content class="padding">
     <h2>Lista: {{list.name}}</h2>
     <ion-list>  
-        <ion-item class="item-remove-animate item-icon-right" ng-repeat="item in list.items" type="item-text-wrap">
-            <p><b>{{item.name}}:</b> {{item.qtd}} {{item.unity}}  </p>
+        <ion-item class="item  item-remove-animate item-icon-right" ng-repeat="item in list.items" type="item-text-wrap">
+            
+            <label class="checkbox inline-item-checkbox" ><input type="checkbox"></label>
+            <i ng-show="item.qtd"><b></b></i>
+            <b>{{item.name}}</b> 
+            <i ng-show="item.qtd"><b>:</b> {{item.qtd}}</i>
+            <i ng-show="item.qtd && item.unity">{{item.unity}}</i>  
             <i class="icon ion-chevron-right icon-accessory"></i>
             <ion-option-button class="button-assertive" ng-click="removeItem(list.id, item)">
               Remover
             </ion-option-button>
         </ion-item>
-    <ion-list>
+      </ion-list>
   </ion-content>
   <button class="button button-float button-assertive" ng-click="changePageByLocation('/tab/lists/'+{{list.id}}+'/add')">
       <i class="icon ion-plus"></i>

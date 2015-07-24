@@ -17,6 +17,10 @@
         <input ng-model="newItem.unity" type="text" placeholder="Kg">
       </label>
         
+      <div class="row responsive-sm" ng-show=" (msgErr) ">
+          <div class="col assertive"><b>{{msgErr}}</b></div>
+      </div>
+        
       <button class="button button-block button-positive" ng-click="newItem.addItem()">
           <b>Adicionar</b>
       </button>
